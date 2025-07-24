@@ -58,8 +58,8 @@ BOARD_USES_ALSA_AUDIO := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 
-# Camera
-TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
+# Camera - HIDL overrideFormat
+$(call soong_config_set,camera,override_format_from_reserved,true)
 
 # Display
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
